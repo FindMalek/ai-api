@@ -1,23 +1,23 @@
 <p align="center">
   <a href="https://nextjs-fastapi-starter.vercel.app/">
     <img src="https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png" height="96">
-    <h3 align="center">Next.js FastAPI Starter</h3>
+    <h3 align="center">AI API - Undrstnd Developer</h3>
   </a>
 </p>
 
-<p align="center">Simple Next.j 14 boilerplate that uses <a href="https://fastapi.tiangolo.com/">FastAPI</a> as the API backend.</p>
+<p align="center">We use <a href="https://fastapi.tiangolo.com/">FastAPI</a> as the API backend.</p>
 
 <br/>
 
 ## Introduction
 
-This is a hybrid Next.js 14 + Python template. One great use case of this is to write Next.js apps that use Python AI libraries on the backend, while still having the benefits of Next.js Route Handlers and Server Side Rendering.
+OpenAI compatible API for developers to use in their projects. This API is built using FastAPI and Next.js.
 
 ## How It Works
 
-The Python/FastAPI server is mapped into to Next.js app under `/api/`.
+The Python/FastAPI server is mapped into to Next.js app under `/app/api/`.
 
-This is implemented using [`next.config.js` rewrites](https://github.com/digitros/nextjs-fastapi/blob/main/next.config.js) to map any request to `/api/py/:path*` to the FastAPI API, which is hosted in the `/api` folder.
+This is implemented using [`next.config.js` rewrites](https://github.com/undrstnd-labs/ai-api/blob/main/next.config.js) to map any request to `/v1/:path*` to the FastAPI API, which is hosted in the `/app/api` folder.
 
 Also, the app/api routes are available on the same domain, so you can use NextJs Route Handlers and make requests to `/api/...`.
 
@@ -27,20 +27,20 @@ In production, the FastAPI server is hosted as [Python serverless functions](htt
 
 ## Demo
 
-https://nextjs-fastapi-starter.vercel.app/
+https://api.undrstnd-labs.com
 
 ## Deploy Your Own
 
 You can clone & deploy it to Vercel with one click:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdigitros%2Fnextjs-fastapi%2Ftree%2Fmain)
+[![Deploy with Vercel](https://vercel.com/button)](https://github.com/undrstnd-labs/ai-api)
 
 ## Developing Locally
 
 You can clone & create this repo with the following command
 
 ```bash
-npx create-next-app nextjs-fastapi --example "https://github.com/digitros/nextjs-fastapi"
+npx create-next-app undrstnd-ai-api --example "https://github.com/undrstnd-labs/ai-api"
 ```
 
 ## Getting Started
@@ -48,8 +48,8 @@ npx create-next-app nextjs-fastapi --example "https://github.com/digitros/nextjs
 First, create and activate a virtual environment:
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv .pip
+source .pip/bin/activate
 ```
 
 Then, install the dependencies:
