@@ -1,7 +1,7 @@
 import os, json
 from typing import List, Optional
 
-from api.models.type import Model
+from app.models.type import Model
 
 class ModelService:
     def __init__(self):

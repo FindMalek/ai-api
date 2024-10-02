@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from config.site import version, title, description
-from api.routers import health, completion
+from app.routers import health, completion
 
 app = FastAPI(
     title=title,

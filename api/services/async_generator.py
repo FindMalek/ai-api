@@ -3,7 +3,7 @@ import asyncio
 from openai import OpenAI
 from typing import List, Optional, Union
 
-from api.models.request import Message
+from app.models.request import Message
 
 
 async def async_generator_chat_completion(
