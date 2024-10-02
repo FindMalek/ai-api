@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://nextjs-fastapi-starter.vercel.app/">
-    <img src="https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png" height="96">
+  <a href="https://dev.undrstnd-labs.com/">
+    <img src="/public/favicons/android-chrome-512x512.png" height="96">
     <h3 align="center">AI API - Undrstnd Developer</h3>
   </a>
 </p>
