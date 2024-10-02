@@ -5,7 +5,7 @@ from engine.models.type import Model
 
 class ModelService:
     def __init__(self):
-        with open(os.path.join(os.getcwd(), "data/models.json"), 'r') as f:
+        with open(os.path.join(os.getcwd(), "public/models.json"), 'r') as f:
             models_data = json.load(f)
         self.models = [Model(**model_data) for model_data in models_data]
 
