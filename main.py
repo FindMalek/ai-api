@@ -25,6 +25,6 @@ app.include_router(completion.router)
 # app.include_router(rag.router)
 
 
-@app.get("/api/helloFastApi")
-def root():
+@app.get("/")
+async def root():
     return {title: description}
