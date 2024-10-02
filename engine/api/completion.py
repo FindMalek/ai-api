@@ -3,9 +3,9 @@ from openai import OpenAI
 from prisma.models import APIToken
 from starlette.responses import StreamingResponse
 from fastapi import APIRouter, HTTPException, Depends
-from app.models.request import ChatCompletionRequest, CompletionRequest
-from app.services.api_key import retrieve_api_key, get_api_token_model_inference
-from app.services.async_generator import async_generator_chat_completion, async_generator_completion
+from engine.models.request import ChatCompletionRequest, CompletionRequest
+from engine.services.api_key import retrieve_api_key, get_api_token_model_inference
+from engine.services.async_generator import async_generator_chat_completion, async_generator_completion
 
 logger = logging.getLogger(__name__)
 

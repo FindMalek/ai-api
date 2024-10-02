@@ -2,9 +2,9 @@ import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from config.site import version, title, description
-from app.api import health, completion
+from engine.api import health, completion
 
-root_path = "/app"
+root_path = "/engine"
 if os.getenv("ROUTE"):
     root_path = os.getenv("ROUTE")
 
@@ -12,8 +12,8 @@ app = FastAPI(
     title=title,
     version=version,
     description=description,
-    docs_url="/api/docs",
-    openapi_url="/api/openapi.json",
+    docs_url="/v1/docs",
+    openapi_url="/v1/openapi.json",
     root_path=root_path
 )
 
@@ -32,6 +32,6 @@ app.include_router(completion.router)
 # app.include_router(rag.router)
 
 
-@app.get("/")
+@app.get("/v1")
 async def root():
     return {title: description}
