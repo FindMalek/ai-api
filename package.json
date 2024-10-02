@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "fastapi-dev": "pip install -r requirements.txt && prisma generate && python3 -m uvicorn engine.main:app --reload",
+    "fastapi-dev": "pip install -r requirements.txt && prisma generate && python3 -m uvicorn api.index:app --reload",
     "next-dev": "next dev",
     "dev": "concurrently \"npm run next-dev\" \"npm run fastapi-dev\"",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "preview": "next build && next start",
+    "lint": "next lint",
+    "test:comp" :"python3 tests/test_compilation.py"
   },
   "dependencies": {
     "@types/node": "22.5.5",

@@ -4,10 +4,10 @@ from fastapi.security.api_key import APIKeyHeader
 
 from prisma.models import APIToken
 
-from engine.models.type import Model
-from engine.database.db import Database
-from engine.services.model import ModelService
-from engine.models.inference import InferenceType, InferenceBaseUrl
+from api.models.type import Model
+from api.database.db import Database
+from api.services.model import ModelService
+from api.models.inference import InferenceType, InferenceBaseUrl
 
 
 async def retrieve_api_key(
